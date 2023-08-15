@@ -3,7 +3,7 @@ function doReduce (arr, func, initial) {
 
     for (let i = 0; i < arr.length; i++) {
 
-        result = func(result, arr[i])
+        result = func(result, arr[i]);
     }
 
     return result;
