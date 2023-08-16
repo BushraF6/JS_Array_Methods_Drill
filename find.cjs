@@ -3,10 +3,10 @@ function doFind (arr, func) {
     if (Array.isArray(arr) && arr.length > 0) {
         let result;
 
-        for (let i = 0; i < arr.length; i++ ) {
+        for (let index = 0; index < arr.length; index++) {
     
-            if (func(arr[i])) {
-                result = arr[i];
+            if (func(arr[index])) {
+                result = arr[index];
                 break;
             }
         }
