@@ -1,17 +1,22 @@
 function doFind (arr, func) {
-    let result;
 
-    for (let i = 0; i < arr.length; i++ ) {
+    if (Array.isArray(arr) && arr.length > 0) {
+        let result;
 
-        if (func(arr[i])) {
-
-            result = arr[i];
-            break;
-
+        for (let i = 0; i < arr.length; i++ ) {
+    
+            if (func(arr[i])) {
+                result = arr[i];
+                break;
+            }
         }
+    
+        return result;  
+
+    } else {
+        return [];
     }
 
-    return result;  
 }
 
 module.exports = doFind;

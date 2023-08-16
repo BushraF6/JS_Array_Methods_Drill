@@ -1,12 +1,18 @@
 function doReduce (arr, func, initial) {
-    let result = initial;
 
-    for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr) && arr.length > 0) {
+        let result = initial;
 
-        result = func(result, arr[i]);
+        for (let i = 0; i < arr.length; i++) {
+            result = func(result, arr[i]);
+        }
+    
+        return result;
+
+    } else {
+        return [];
     }
 
-    return result;
 }
 
 module.exports = doReduce;

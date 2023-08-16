@@ -1,12 +1,19 @@
 function doMap (arr, func) {
-    let newArr = [];
 
-    for (let num = 0; num < arr.length; num++) {
+    if (Array.isArray(arr)) {
+        let newArr = [];
 
-        newArr.push(func(arr[num]));
-    }
+        for (let num = 0; num < arr.length; num++) {
     
-    return newArr;
+            newArr.push(func(arr[num]));
+        }
+        
+        return newArr;
+
+    } else {
+        return [];
+    }
+ 
 }
 
 module.exports = doMap;

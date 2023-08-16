@@ -1,14 +1,20 @@
 function doFilter (arr, func) {
-    let newArr = [];
+    if (Array.isArray(arr)) {
+        let newArr = [];
 
-    for (let num = 0; num < arr.length; num++) {
+        for (let num = 0; num < arr.length; num++) {
 
-        if (func(arr[num])) {
-            
-            newArr.push(arr[num]);
-        }
-    }    
-    return newArr;
+            if (func(arr[num])) {
+                
+                newArr.push(arr[num]);
+            }
+        }    
+        return newArr;
+
+    } else {
+        return [];
+    }
+    
 }
 
 module.exports = doFilter;

@@ -1,18 +1,15 @@
 function doEach(arr, func) {
 
-    if (Array.isArray(arr)) {
+    if (Array.isArray(arr) && arr.length > 0) {
 
         for (let i = 0; i < arr.length; i++) {
-
-            func(arr[i], i);
-            
+            func(arr[i], i); 
         }
 
     } else {
-
-        return [];
-
+        console.log([]);
     }
+
 }
 
 module.exports = doEach;
