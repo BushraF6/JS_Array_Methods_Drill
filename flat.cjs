@@ -6,9 +6,9 @@ function doFlat(items) {
         return items;
     }
 
-    for (let i = 0; i < items.length; i++) {
+    for (let index = 0; index < items.length; index++) {
 
-        result = result.concat(doFlat(items[i]));
+        result = result.concat(doFlat(items[index]));
          
     }
 
