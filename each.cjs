@@ -2,8 +2,8 @@ function doEach(arr, func) {
 
     if (Array.isArray(arr) && arr.length > 0) {
 
-        for (let i = 0; i < arr.length; i++) {
-            func(arr[i], i); 
+        for (let index = 0; index < arr.length; index++) {
+            func(arr[index], index); 
         }
 
     } else {
